@@ -1,202 +1,335 @@
 <html>
 
-  <head>
-    <!-- Tab Title -->
-    <title>Professional Finder | Quiz</title>
-    <!-- Icon -->
-    <link rel="icon" href="https://www.freeiconspng.com/uploads/communication-community-connection-global-internet-network-icon--14.png">
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  </head>
+<head>
+  <!-- Tab Title -->
+  <title>Professional Finder | Quiz</title>
+  <!-- Icon -->
+  <link rel="icon" href="https://www.freeiconspng.com/uploads/communication-community-connection-global-internet-network-icon--14.png">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+</head>
 
 
-  <body>
+<body>
 
-    <div class = "container" style="width: 1100px">
-      
+  <div class="container" style="width: 1100px">
 
-      <!-- Quiz Page Title -->
-      <div class="page-header" style= "text-align: center">
-        <p style="font-size: 40px; color: #04899B; margin-bottom: 20px">
 
-          <!-- Glyphicon Style -->
-          <span class="glyphicon glyphicon-comment" style="color: #16A2B8; font-size: 30px; margin-right: 10px"></span> 
+    <!-- Quiz Page Title -->
+    <div class="page-header" style="text-align: center">
+      <p style="font-size: 40px; color: #04899B; margin-bottom: 20px">
 
-          Professional Connect Quiz
+        <!-- Glyphicon Style -->
+        <span class="glyphicon glyphicon-comment" style="color: #16A2B8; font-size: 30px; margin-right: 10px"></span>
 
-          <!-- Glyphicon Style -->
-          <span class="glyphicon glyphicon-comment" style="font-size: 30px; color: #16A2B8; transform: scaleX(-1); -moz-transform: scaleX(-1);
+        Professional Connect Quiz
+
+        <!-- Glyphicon Style -->
+        <span class="glyphicon glyphicon-comment" style="font-size: 30px; color: #16A2B8; transform: scaleX(-1); -moz-transform: scaleX(-1);
           -webkit-transform: scaleX(-1); -ms-transform: scaleX(-1); margin-left: 10px">
-          </span>
-          </p>
+        </span>
+      </p>
+
+    </div>
+
+
+    <!-- User Name and Photo Section -->
+    <div class="panel panel-default">
+      <div class="panel-heading" style="background-color: #04899B; color: white">
+        <h3 class="panel-title" style="padding-left:14px"><strong>About You</strong></h3>
+      </div>
+      <div class="panel-body" style="padding-left:30px; padding-right:30px">
+        <h4>Your Full Name</h4>
+        <div class="input-group">
+          <input id="formNameEntered" class="form-control" type="text" name="name" placeholder="Enter name here">
+          <span class="input-group-addon" style="background-color: #38C790; color: white">Submit</span>
+        </div>
+        <br>
+        <h4>Link to a Photo Image</h4>
+        <div class="input-group">
+          <input id="formImageEntered" class="form-control" type="text" name="name" placeholder="http://photolink.com.jpg/">
+          <span class="input-group-addon" style="background-color: #38C790; color: white">Submit</span>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Quiz Page Questions Section -->
+    <div class="panel panel-default">
+      <div class="panel-heading" style="background-color: #04899B; color: white">
+        <h3 class="panel-title" style="padding-left:14px"><strong>Questionnaire</strong></h3>
+      </div>
+      <div class="panel-body" style="padding-left:30px">
+
+        <!-- Question 1 -->
+        <h4><strong>Question 1</strong></h4>
+        <h5>You find interest in technology and computer science.</h5>
+        <select data-placeholder="" class="valueSelection" id="Q1" style="margin-bottom: 20px">
+          <option value=""></option>
+          <option value="1">1 (Strongly Disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Strongly Agree)</option>
+        </select>
+
+        <!-- Question 2 -->
+        <h4><strong>Question 2</strong></h4>
+        <h5>You prefer a larger company rather than a start-up.</h5>
+        <select data-placeholder="" class="valueSelection" id="Q2" style="margin-bottom: 20px">
+          <option value=""></option>
+          <option value="1">1 (Strongly Disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Strongly Agree)</option>
+        </select>
+
+        <!-- Question 3 -->
+        <h4><strong>Question 3</strong></h4>
+        <h5>You consider yourself creative and you enjoy designing.</h5>
+        <select data-placeholder="" class="valueSelection" id="Q3" style="margin-bottom: 20px">
+          <option value=""></option>
+          <option value="1">1 (Strongly Disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Strongly Agree)</option>
+        </select>
+
+        <!-- Question 4 -->
+        <h4><strong>Question 4</strong></h4>
+        <h5>Helping people is your passion so the medical field is interesting to you.</h5>
+        <select data-placeholder="" class="valueSelection" id="Q4" style="margin-bottom: 20px">
+          <option value=""></option>
+          <option value="1">1 (Strongly Disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Strongly Agree)</option>
+        </select>
+
+        <!-- Question 5 -->
+        <h4><strong>Question 5</strong></h4>
+        <h5>You enjoy building mechanical devices and discovering the functionality of an object.</h5>
+        <select data-placeholder="" class="valueSelection" id="Q5" style="margin-bottom: 20px">
+          <option value=""></option>
+          <option value="1">1 (Strongly Disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Strongly Agree)</option>
+        </select>
+
+        <!-- Question 6 -->
+        <h4><strong>Question 6</strong></h4>
+        <h5>You are effective at dealing with fast-changing situations and find that stable environments can become
+          boring.</h5>
+        <select data-placeholder="" class="valueSelection" id="Q6" style="margin-bottom: 20px">
+          <option value=""></option>
+          <option value="1">1 (Strongly Disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Strongly Agree)</option>
+        </select>
+
+        <!-- Question 7 -->
+        <h4><strong>Question 7</strong></h4>
+        <h5>You enjoy building structural designs and how people interact with buildings.</h5>
+        <select data-placeholder="" class="valueSelection" id="Q7" style="margin-bottom: 20px">
+          <option value=""></option>
+          <option value="1">1 (Strongly Disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Strongly Agree)</option>
+        </select>
+
+        <!-- Question 8 -->
+        <h4><strong>Question 8</strong></h4>
+        <h5>You prefer artsy atmosphere where you can be creative and use different mediums to make art.</h5>
+        <select data-placeholder="" class="valueSelection" id="Q8" style="margin-bottom: 20px">
+          <option value=""></option>
+          <option value="1">1 (Strongly Disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Strongly Agree)</option>
+        </select>
+
+        <!-- Question 9 -->
+        <h4><strong>Question 9</strong></h4>
+        <h5>You find coding and web developement.</h5>
+        <select data-placeholder="" class="valueSelection" id="Q9" style="margin-bottom: 20px">
+          <option value=""></option>
+          <option value="1">1 (Strongly Disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Strongly Agree)</option>
+        </select>
+
+        <!-- Question 10 -->
+        <h4><strong>Question 10</strong></h4>
+        <h5>You intrest lies in electrical design.</h5>
+        <select data-placeholder="" class="valueSelection" id="Q10" style="margin-bottom: 20px">
+          <option value=""></option>
+          <option value="1">1 (Strongly Disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Strongly Agree)</option>
+        </select>
 
       </div>
+    </div>
 
 
-      <!-- User Name and Photo Section -->
-      <div class="panel panel-default">
-        <div class="panel-heading"style="background-color: #04899B; color: white">
-          <h3 class="panel-title" style= "padding-left:14px" ><strong>About You</strong></h3>
-        </div>
-        <div class="panel-body"style= "padding-left:30px; padding-right:30px">
-          <h4>Your Full Name</h4>
-          <div class="input-group">
-            <input id = "formName" class="form-control" type="text" name="name" placeholder="Enter name here">
-            <span class="input-group-addon" style = "background-color: #38C790; color: white">Submit</span>
-          </div>  
-          <br>
-          <h4>Link to a Photo Image</h4>
-          <div class="input-group">
-            <input id = "formImage" class="form-control" type="text" name="name" placeholder="http://photolink.com.jpg/">
-            <span class="input-group-addon"style = "background-color: #38C790; color: white">Submit</span>
+    <!-- Quiz Submit Button -->
+    <button id="submitButton" type="submit" class="btn btn-md" style="background-color: #38C790; color: white; margin-bottom: 20px">
+      <h4><span class="glyphicon glyphicon-send"></span> Submit</h4>
+    </button>
+
+    <br>
+
+    <!-- Webpage Footer -->
+    <footer class="footer" style="color:#04899B; margin-bottom: 100px">
+      <p><a href="/api/connections">API Connection List</a> | <a href="" target="_blank">GitHub Repo</a> | <a href="/">Home</a></p>
+    </footer>
+
+    <!-- Match Modal -->
+    <div id="resultsModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal Content-->
+        <div class="modal-content">
+
+          <!-- "X" Button to close the modal -->
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h2 class="modal-title"><strong>Meet Your New Professional Connection!</strong></h2>
           </div>
+
+          <!-- Modal Body (For Match Info) -->
+          <div class="modal-body">
+            <h2 id="matchResultName"></h2>
+            <img id="matchResultImage" src="" alt="Image Not Found" style="max-width: 350px;">
+          </div>
+
+          <!-- Modal Footer (Close Button) -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+
         </div>
+
       </div>
+    </div>
 
 
-      <!-- Quiz Page Questions Section -->
-      <div class="panel panel-default">
-        <div class="panel-heading"style="background-color: #04899B; color: white">
-          <h3 class="panel-title"style= "padding-left:14px"><strong>Questionnaire</strong></h3>
-        </div>
-        <div class="panel-body"  style= "padding-left:30px">
+  </div>
+
+
+  <!-- Link in jQuery -->
+  <script src="https://code.jquery.com/jquery.js"></script>
+
+
+  <!-- Latest compiled and minified JavaScript (USED FOR THE MODAL) -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
+
+
+  <!-- JavaScript -->
+  <script>
+    // Global Variable Declaration (scoping fix)
+    var answersSubmit;
+    $(document).ready(function () {
+      // Event Listener for Submission
+      $('#submitButton').on('click', function () {
+
+        // Check if all the user fields are completed
+        checkQComplete(function () {
+          // Proceed with AJAX call if all questions are answered
+          if (answersSubmit) {
+            compileAnswers();
+          }
+          else {
+            alert('Please complete all questions submitting!');
+          }
+        }); 
+      }); 
+    }); 
+
+    // Check user input function
+    function checkQComplete(callback) {
+
+      // Check each question
+      var questionsCompleted;
+      $('.valueSelection').each(function () {
+        if ($(this).val() == "") {
+          questionsCompleted = false;
+        }
+      })
+        // This counters the async behavior of $.each()
+        .promise().done(function () {
+          // Check if any questions are incomplete
+          if (questionsCompleted == false) {
+            answersSubmit = false;
+          }
+          // Name is entered
+          else if ($('#formNameEntered').val().trim() == "") {
+            answersSubmit = false;
+          }
+          // Link is entered
+          else if ($('#formImageEntered').val().trim() == "") {
+            answersSubmit = false;
+          }
+          // Else, the all fields are completed
+          else {
+            answersSubmit = true;
+          }
           
-          <!-- Question 1 -->
-          <h4><strong>Question 1</strong></h4>
-          <h5>You find interest in technology and computer science.</h5>
-          <select data-placeholder="" class="chosen-select"  id="Q1" style="margin-bottom: 20px">
-            <option value=""></option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-          </select>
+          callback();
+        });
+    }
+    function compileAnswers() {
 
-          <!-- Question 2 -->
-          <h4><strong>Question 2</strong></h4>
-          <h5>You prefer a larger company rather than a start-up.</h5>
-          <select data-placeholder="" class="chosen-select" id="Q2"style="margin-bottom: 20px">
-            <option value=""></option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-          </select>
+      // Make new professional connection object
+      var viewConnection = {
+        name: $('#formNameEntered').val().trim(),
+        photo: $('#formImageEntered').val().trim(),
+        scores: []
+      };
+      // Loop through Questions to get scores
+      var resultsArray = [];
+      $('.valueSelection').each(function () {
+        resultsArray.push(parseInt($(this).val())); // Parse Input Value as integer
+      })
+        // This counters the async behavior of $.each()
+        .promise().done(function () {
 
-          <!-- Question 3 -->
-          <h4><strong>Question 3</strong></h4>
-          <h5>You consider yourself creative and you enjoy designing.</h5>
-          <select data-placeholder="" class="chosen-select" id="Q3"style="margin-bottom: 20px">
-            <option value=""></option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-          </select>
+          // Push the array of scores to the new friend object
+          viewConnection.scores = resultsArray;
 
-          <!-- Question 4 -->
-          <h4><strong>Question 4</strong></h4>
-          <h5>Helping people is your passion so the medical field is interesting to you.</h5>
-          <select data-placeholder="" class="chosen-select" id="Q4" style="margin-bottom: 20px">
-            <option value=""></option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-          </select>
+          // POST the viewConnection to the connect.js file and return the best professional match
 
-          <!-- Question 5 -->
-          <h4><strong>Question 5</strong></h4>
-          <h5>You enjoy building mechanical devices and discovering the functionality of an object.</h5>
-          <select data-placeholder="" class="chosen-select" id="Q5" style="margin-bottom: 20px">
-            <option value=""></option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-          </select>
+          var currentURL = window.location.origin;
+          $.post(currentURL + "/api/connections", viewConnection, function (data) {
 
-          <!-- Question 6 -->
-          <h4><strong>Question 6</strong></h4>
-          <h5>You are effective at dealing with fast-changing situations and find that stable environments can become boring.</h5>
-          <select data-placeholder="" class="chosen-select" id="Q6"style="margin-bottom: 20px">
-            <option value=""></option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-          </select>
+            // Add Best Match attributes to Modal
+            $('#matchResultName').text(data.name);
+            $('#matchResultImage').attr('src', data.photo);
 
-          <!-- Question 7 -->
-          <h4><strong>Question 7</strong></h4>
-          <h5>You enjoy building structural designs and how people interact with buildings.</h5>
-          <select data-placeholder="" class="chosen-select" id="Q7"style="margin-bottom: 20px">
-            <option value=""></option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-          </select>
-
-          <!-- Question 8 -->
-          <h4><strong>Question 8</strong></h4>
-          <h5>You prefer artsy atmosphere where you can be creative and use different mediums to make art.</h5>
-          <select data-placeholder="" class="chosen-select" id="Q8"style="margin-bottom: 20px">
-            <option value=""></option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-          </select>
-
-          <!-- Question 9 -->
-          <h4><strong>Question 9</strong></h4>
-          <h5>You find coding and web developement.</h5>
-          <select data-placeholder="" class="chosen-select" id="Q9" style="margin-bottom: 20px">
-            <option value=""></option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-          </select>
-
-          <!-- Question 10 -->
-          <h4><strong>Question 10</strong></h4>
-          <h5>You intrest lies in electrical design.</h5>
-          <select data-placeholder="" class="chosen-select" id="Q10" style="margin-bottom: 20px">
-            <option value=""></option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-          </select>
-
-        </div>
-      </div>
+            // Show the modal with the best match 
+            $("#resultsModal").modal('toggle');
+          }); 
+        });
+    }
+  </script>
 
 
-      <!-- Quiz Submit Button -->
-      <button id="submitButton" type="submit" class="btn btn-md" style = "background-color: #38C790; color: white; margin-bottom: 20px">
-        <h4><span class="glyphicon glyphicon-send"></span> Submit</h4></button> 
-  
-      <br>
-
-      <!-- Webpage Footer -->
-      <footer class="footer" style= "color:#04899B">
-        <p><a href="/api/connections">API Connection List</a> | <a href="" target="_blank">GitHub Repo</a> | <a href="/">Home</a></p>
-      </footer> 
-
-
-  </body>
+</body>
 
 </html>
