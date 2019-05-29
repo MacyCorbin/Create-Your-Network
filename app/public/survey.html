@@ -46,6 +46,12 @@
           <span class="input-group-addon" style="background-color: #38C790; color: white">Submit</span>
         </div>
         <br>
+        <h4>Your Profession</h4>
+        <div class="input-group">
+          <input id="formJobEntered" class="form-control" type="text" name="name" placeholder="Enter job title here">
+          <span class="input-group-addon" style="background-color: #38C790; color: white">Submit</span>
+        </div>
+        <br>
         <h4>Link to a Photo Image</h4>
         <div class="input-group">
           <input id="formImageEntered" class="form-control" type="text" name="name" placeholder="http://photolink.com.jpg/">
@@ -149,7 +155,7 @@
 
         <!-- Question 8 -->
         <h4><strong>Question 8</strong></h4>
-        <h5>You prefer artsy atmosphere where you can be creative and use different mediums to make art.</h5>
+        <h5>You prefer atmosphere where you can be creative and use different mediums to make design.</h5>
         <select data-placeholder="" class="valueSelection" id="Q8" style="margin-bottom: 20px">
           <option value=""></option>
           <option value="1">1 (Strongly Disagree)</option>
@@ -161,7 +167,7 @@
 
         <!-- Question 9 -->
         <h4><strong>Question 9</strong></h4>
-        <h5>You find coding and web developement.</h5>
+        <h5>You find coding and web developement enjoyable.</h5>
         <select data-placeholder="" class="valueSelection" id="Q9" style="margin-bottom: 20px">
           <option value=""></option>
           <option value="1">1 (Strongly Disagree)</option>
@@ -208,14 +214,15 @@
 
           <!-- "X" Button to close the modal -->
           <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h2 class="modal-title"><strong>Meet Your New Professional Connection!</strong></h2>
+            <button type="button"style = "text-align: center; color: #04899B" class="close" data-dismiss="modal">&times;</button>
+            <h2 class="modal-title" style = "text-align: center; color: #04899B"><strong>Meet Your New Professional Connection!</strong></h2>
           </div>
 
           <!-- Modal Body (For Match Info) -->
           <div class="modal-body">
-            <h2 id="matchResultName"></h2>
-            <img id="matchResultImage" src="" alt="Image Not Found" style="max-width: 350px;">
+            <h3 id="matchResultName"></h3>
+            <h3 id="matchResultJob"></h3>
+            <img id="matchResultImage" src="" alt="Image Not Found"> 
           </div>
 
           <!-- Modal Footer (Close Button) -->
@@ -282,6 +289,9 @@
           else if ($('#formNameEntered').val().trim() == "") {
             answersSubmit = false;
           }
+          else if ($('#formJobEntered').val().trim() == "") {
+            answersSubmit = false;
+          }
           // Link is entered
           else if ($('#formImageEntered').val().trim() == "") {
             answersSubmit = false;
@@ -297,30 +307,32 @@
     function compileAnswers() {
 
       // Make new professional connection object
-      var viewConnection = {
+      var newConnection = {
         name: $('#formNameEntered').val().trim(),
+        job: $('#formJobEntered').val().trim(),
         photo: $('#formImageEntered').val().trim(),
         scores: []
       };
       // Loop through Questions to get scores
       var resultsArray = [];
       $('.valueSelection').each(function () {
-        resultsArray.push(parseInt($(this).val())); // Parse Input Value as integer
+        resultsArray.push(parseInt($(this).val())); 
       })
-        // This counters the async behavior of $.each()
+        
         .promise().done(function () {
 
-          // Push the array of scores to the new friend object
-          viewConnection.scores = resultsArray;
+          // Push the array of scores to the new connection object
+          newConnection.scores = resultsArray;
 
           // POST the viewConnection to the connect.js file and return the best professional match
 
           var currentURL = window.location.origin;
-          $.post(currentURL + "/api/connections", viewConnection, function (data) {
+          $.post(currentURL + "/api/connection", newConnection, function (data) {
 
             // Add Best Match attributes to Modal
             $('#matchResultName').text(data.name);
-            $('#matchResultImage').attr('src', data.photo);
+            $('#matchResultJob').text(data.job);
+           // $('#matchResultImage').attr('src', data.photo);
 
             // Show the modal with the best match 
             $("#resultsModal").modal('toggle');
