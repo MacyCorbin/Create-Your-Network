@@ -40,6 +40,8 @@ var connectionData = [
     scores: [1, 2, 5, 1, 1, 5, 5, 3, 1, 3]
   },
 
+  //https://static1.squarespace.com/static/5a008db2a803bb91f09c73ac/5a517474c830256b6188d576/5a517474e4966ba79af93527/1538156049797/0012-ransom-corporate-headshot.JPG
+
   // Professional 6
   {
     name: "Tim Lee",

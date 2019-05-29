@@ -2,7 +2,7 @@
 
 <head>
   <!-- Tab Title -->
-  <title>Professional Finder | Quiz</title>
+  <title>Professional Connect | Quiz</title>
   <!-- Icon -->
   <link rel="icon" href="https://www.freeiconspng.com/uploads/communication-community-connection-global-internet-network-icon--14.png">
   <!-- Bootstrap -->
@@ -43,19 +43,19 @@
         <h4>Your Full Name</h4>
         <div class="input-group">
           <input id="formNameEntered" class="form-control" type="text" name="name" placeholder="Enter name here">
-          <span class="input-group-addon" style="background-color: #38C790; color: white">Submit</span>
+          <span class="input-group-addon" style="background-color: #38C790; color: white">Required</span>
         </div>
         <br>
         <h4>Your Profession</h4>
         <div class="input-group">
           <input id="formJobEntered" class="form-control" type="text" name="name" placeholder="Enter job title here">
-          <span class="input-group-addon" style="background-color: #38C790; color: white">Submit</span>
+          <span class="input-group-addon" style="background-color: #38C790; color: white">Required</span>
         </div>
         <br>
         <h4>Link to a Photo Image</h4>
         <div class="input-group">
           <input id="formImageEntered" class="form-control" type="text" name="name" placeholder="http://photolink.com.jpg/">
-          <span class="input-group-addon" style="background-color: #38C790; color: white">Submit</span>
+          <span class="input-group-addon" style="background-color: #38C790; color: white">Required</span>
         </div>
       </div>
     </div>
@@ -202,7 +202,7 @@
 
     <!-- Webpage Footer -->
     <footer class="footer" style="color:#04899B; margin-bottom: 100px">
-      <p><a href="/api/connections">API Connection List</a> | <a href="" target="_blank">GitHub Repo</a> | <a href="/">Home</a></p>
+      <p><a href="/api/connection">API Connection List</a> | <a href="" target="_blank">GitHub Repo</a> | <a href="/">Home</a></p>
     </footer>
 
     <!-- Match Modal -->
@@ -215,14 +215,14 @@
           <!-- "X" Button to close the modal -->
           <div class="modal-header">
             <button type="button"style = "text-align: center; color: #04899B" class="close" data-dismiss="modal">&times;</button>
-            <h2 class="modal-title" style = "text-align: center; color: #04899B"><strong>Meet Your New Professional Connection!</strong></h2>
+            <h3 class="modal-title" style = "text-align: center; color: #04899B"><strong>Meet Your New Professional Connection!</strong></h3>
           </div>
 
           <!-- Modal Body (For Match Info) -->
           <div class="modal-body">
-            <h3 id="matchResultName"></h3>
-            <h3 id="matchResultJob"></h3>
-            <img id="matchResultImage" src="" alt="Image Not Found"> 
+            <h4 id="matchResultName"></h4>
+            <h5 id="matchResultJob"></h5>
+            <img id="matchResultImage" src="" alt="Image Not Found" width="50%"> 
           </div>
 
           <!-- Modal Footer (Close Button) -->
@@ -332,7 +332,7 @@
             // Add Best Match attributes to Modal
             $('#matchResultName').text(data.name);
             $('#matchResultJob').text(data.job);
-           // $('#matchResultImage').attr('src', data.photo);
+           $('#matchResultImage').attr('src', data.photo);
 
             // Show the modal with the best match 
             $("#resultsModal").modal('toggle');
